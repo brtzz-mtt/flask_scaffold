@@ -1,6 +1,7 @@
 from cnf import *
 
 from flask import Flask, render_template
+from markdown import markdown
 
 def flask_template_render(template: str = 'index.html',
     title: str = BASE_TITLE,
@@ -17,7 +18,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return flask_template_render()
+    file = open('README.md', 'r')
+    html = markdown(file.read()).replace("\n", '')
+    file.close()
+    return flask_template_render(
+        args = {'html': html}
+    )
 
 if __name__ == '__main__':
     print(BASE_TITLE + " | " + COPYRIGHT)
