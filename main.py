@@ -25,6 +25,7 @@ def index():
         args = {'html': html}
     )
 
+print(BASE_TITLE + " | " + COPYRIGHT)
+
 if __name__ == '__main__':
-    print(BASE_TITLE + " | " + COPYRIGHT)
     app.run(debug = DEBUG_MODE)
