@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rwd.css') }}" />
+    <link rel=icon href="{{ url_for('static', filename='favicon.png') }}" sizes="24x24" type="image/png" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ meta_description }}">
+    {% if debug %}
+        <style>
+            div.grid {
+                box-shadow: 0 0 8px inset red;
+            }
+        </style>
+    {% endif %}
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
