@@ -11,6 +11,15 @@ Flask Scaffold v0.0.1
 
 Just a simple scaffold structure for Python/JavaScript projects with Flask/Jinja2
 
+Usage of ./cli.sh bash script(s)
+--------------------------------
+
+```sh cli.sh test```
+runs all tests contained in ./test.py and saves resulting code-coverage reports in html format under ./htmlcov, then updates requirements.txt file with pipreqs
+
+```sh cli.sh build wget```
+runs test command, then exports a static version of web application (requires wget)
+
 ---
 
 Copyright © 2021 Bertozzi Matteo
