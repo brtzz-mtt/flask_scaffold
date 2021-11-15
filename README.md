@@ -15,10 +15,10 @@ Usage of ./cli.sh bash script(s)
 --------------------------------
 
 ```sh cli.sh test```
-runs all tests contained in ./test.py and saves resulting code-coverage reports in html format under ./htmlcov, then updates requirements.txt file with pipreqs
+runs all tests contained in ./tests.py and saves resulting code-coverage reports in html format under ./htmlcov, then updates requirements.txt file with pipreqs
 
 ```sh cli.sh build wget```
-runs test command, then exports a static version of web application (requires wget)
+runs test command, then exports a static version of web application (requires wget) under index.html
 
 ---
 
